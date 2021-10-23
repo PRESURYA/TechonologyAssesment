@@ -23,21 +23,21 @@ public class Main {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter your name: ");
 		String name=sc.nextLine();
+		System.out.println("It's Grocerry?(yes/no)");
+		String grocery=sc.nextLine();	
 		
-		System.out.println("Hii "+name+" Choose the one which you belong to: ");
-		System.out.println("1.Employee of the store\n2.Affliate of the store\n3.Customer");
-		int choice=sc.nextInt();
 		System.out.println("Enter your bill: ");
 		double bill=sc.nextFloat();
 		double final_bill=0;
-		System.out.println("It's Grocerry?(yes/no)");
-		sc.nextLine();
-		String grocery=sc.nextLine();	
 		if(grocery.equals("yes"))
 		{
 			final_bill=bill-((bill/100)*5);
 		}else
 		{
+			System.out.println("Hii "+name+" Choose the one which you belong to: ");		
+			System.out.println("1.Employee of the store\n2.Affliate of the store\n3.Customer");
+			int choice=sc.nextInt();
+
 			switch(choice)
 			{
 				case 1:
@@ -63,3 +63,4 @@ public class Main {
 	}
 
 }
+
